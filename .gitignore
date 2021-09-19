@@ -25,3 +25,15 @@ hs_err_pid*
 .classpath
 .project
 *.prefs
+.metadata/.lock
+*.xml
+*.ini
+.metadata/.plugins/org.eclipse.ui.intro/introstate
+*.properties
+*.setup
+*.dat
+.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache
+.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache
+.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache
+*.xmi
+*.resources
