@@ -21,6 +21,7 @@ public class Users {
 	private String email;
 	private String mobile;
 	private String role;
+	private String pass;
 	
 	
 	public Users() {
@@ -36,6 +37,19 @@ public class Users {
 		this.email = email;
 		this.mobile = mobile;
 		
+	}
+	
+	
+
+	public Users(long id, String firstname, String lastname, String email, String mobile, String role, String pass) {
+		super();
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.email = email;
+		this.mobile = mobile;
+		this.role = role;
+		this.pass = pass;
 	}
 
 
@@ -96,6 +110,17 @@ public class Users {
 
 	public void setRole(String role) {
 		this.role = role;
+	}
+	
+
+
+	public String getPass() {
+		return pass;
+	}
+
+
+	public void setPass(String pass) {
+		this.pass = pass;
 	}
 
 
