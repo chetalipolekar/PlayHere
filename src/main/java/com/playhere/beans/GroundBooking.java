@@ -29,6 +29,31 @@ public class GroundBooking {
 		this.datetime = datetime;
 		this.price = price;
 	}
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public LocalDateTime getDatetime() {
+		return datetime;
+	}
+	public void setDatetime(LocalDateTime datetime) {
+		this.datetime = datetime;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public Users getUser() {
+		return user;
+	}
+	public void setUser(Users user) {
+		this.user = user;
+	}
 	@Override
 	public String toString() {
 		return "GroundBooking [id=" + id + ", datetime=" + datetime + ", price=" + price + "]";

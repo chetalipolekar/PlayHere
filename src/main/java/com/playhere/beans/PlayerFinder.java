@@ -29,6 +29,31 @@ public class PlayerFinder {
 		this.t = t;
 	
 	}
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getSport() {
+		return sport;
+	}
+	public void setSport(String sport) {
+		this.sport = sport;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public TimeSlot getT() {
+		return t;
+	}
+	public void setT(TimeSlot t) {
+		this.t = t;
+	}
 	@Override
 	public String toString() {
 		return "PlayerFinder [sport=" + sport + ", location=" + location + ", t=" + t + "]";

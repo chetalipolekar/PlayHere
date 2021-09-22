@@ -1,12 +1,10 @@
 package com.playhere.beans;
 
-import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 
 @Entity
 public class Ground {
@@ -31,6 +29,44 @@ public class Ground {
 		this.groundType = groundType;
 		this.image = image;
 		Sports = sports;
+	}
+	
+	
+	public Long getGid() {
+		return gid;
+	}
+	public void setGid(Long gid) {
+		this.gid = gid;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public String getGroundType() {
+		return groundType;
+	}
+	public void setGroundType(String groundType) {
+		this.groundType = groundType;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	public String getSports() {
+		return Sports;
+	}
+	public void setSports(String sports) {
+		Sports = sports;
+	}
+	public Users getOwner() {
+		return owner;
+	}
+	public void setOwner(Users owner) {
+		this.owner = owner;
 	}
 	@Override
 	public String toString() {
