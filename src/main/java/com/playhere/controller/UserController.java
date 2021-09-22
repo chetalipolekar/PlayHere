@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.playhere.beans.UserAuthenticationBean;
 import com.playhere.beans.Users;
 import com.playhere.service.UserService;
 
@@ -27,5 +28,12 @@ public class UserController {
 	@GetMapping
 	public List<Users> getAllUsers() {
 		return userService.getAll();
+	}
+	
+	@PostMapping("/login")
+	public boolean login(@RequestBody UserAuthenticationBean authentication) {
+		
+		return userService.authenticate(authentication);
+		
 	}
 }

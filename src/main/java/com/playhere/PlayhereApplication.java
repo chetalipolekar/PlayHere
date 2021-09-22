@@ -12,7 +12,8 @@ public class PlayhereApplication {
 
 
 	public static void main(String[] args) {
-		SpringApplication.run(PlayhereApplication.class, args);		
+		SpringApplication.run(PlayhereApplication.class, args);
+		
 	}
 
 }

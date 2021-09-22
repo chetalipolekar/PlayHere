@@ -32,38 +32,6 @@ public class TimeSlot {
 		this.ground = ground;
 	}
 
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public LocalDateTime getTime() {
-		return time;
-	}
-
-	public void setTime(LocalDateTime time) {
-		this.time = time;
-	}
-
-	public double getPrice() {
-		return price;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
-	public Ground getGround() {
-		return ground;
-	}
-
-	public void setGround(Ground ground) {
-		this.ground = ground;
-	}
-
 	@Override
 	public String toString() {
 		return "TimeSlot [id=" + id + ", time=" + time + ", price=" + price + ", ground=" + ground + "]";

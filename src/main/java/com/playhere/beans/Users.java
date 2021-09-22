@@ -4,12 +4,10 @@ package com.playhere.beans;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.Getter;
 import lombok.Setter;
-
 @Getter
 @Setter
 @Entity
@@ -21,6 +19,7 @@ public class Users {
 	private String firstname;
 	private String lastname;
 	private String email;
+	private String password;
 	private String mobile;
 	private String role;
 	
@@ -30,17 +29,16 @@ public class Users {
 	}
 
 
-	public Users(long id, String firstname, String lastname, String email, String mobile, String role) {
+	public Users(long id, String firstname, String lastname, String email, String mobile) {
 		super();
 		this.id = id;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.email = email;
 		this.mobile = mobile;
-		this.role = role;
+		
 	}
 
-	
 
 	public long getId() {
 		return id;
@@ -99,6 +97,16 @@ public class Users {
 
 	public void setRole(String role) {
 		this.role = role;
+	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 
