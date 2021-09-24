@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.playhere.beans.Ground;
 
-public interface GroundDao extends JpaRepository<Ground, Long>{
+public interface GroundRepository extends JpaRepository<Ground, Long>{
 	
 }

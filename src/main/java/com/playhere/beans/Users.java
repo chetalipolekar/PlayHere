@@ -20,25 +20,12 @@ public class Users {
 	private String email;
 	private String mobile;
 	private String role;
-	private String pass;
+	private String password;
 	
 	
 	public Users() {
 		super();
 	}
-
-
-	public Users(long id, String firstname, String lastname, String email, String mobile) {
-		super();
-		this.id = id;
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.email = email;
-		this.mobile = mobile;
-		
-	}
-	
-	
 
 	public Users(long id, String firstname, String lastname, String email, String mobile, String role, String pass) {
 		super();
@@ -48,7 +35,7 @@ public class Users {
 		this.email = email;
 		this.mobile = mobile;
 		this.role = role;
-		this.pass = pass;
+		this.password = pass;
 	}
 
 
@@ -113,13 +100,13 @@ public class Users {
 	
 
 
-	public String getPass() {
-		return pass;
+	public String getPassword() {
+		return password;
 	}
 
 
-	public void setPass(String pass) {
-		this.pass = pass;
+	public void setPassword(String pass) {
+		this.password = pass;
 	}
 
 

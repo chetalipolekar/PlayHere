@@ -6,11 +6,10 @@ import com.playhere.beans.TimeSlot;
 
 public interface TimeSlotService {
 
-	void addTimeSlot(TimeSlot t);
-
-
 
 	List<TimeSlot> findAll();
+
+	void addTimeSlot(TimeSlot timeSlot, Long groundId);
 
 
 

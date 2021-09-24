@@ -1,5 +1,7 @@
 package com.playhere.beans;
 
+
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,21 +17,24 @@ public class Ground {
 	private String location;
 	private String groundType;
 	private String image;
-	private String Sports;
+	private String sport;
 	
 	@ManyToOne(cascade=CascadeType.ALL)
 	private Users owner;
+
+	
 	public Ground() {
 		super();
 	}
-	public Ground(Long gid, String location, String groundType, String image, String sports) {
+	public Ground(Long gid, String location, String groundType, String image, String sport) {
 		super();
 		this.gid = gid;
 		this.location = location;
 		this.groundType = groundType;
 		this.image = image;
-		Sports = sports;
+		this.sport = sport;
 	}
+	
 	
 	public Long getGid() {
 		return gid;
@@ -55,11 +60,11 @@ public class Ground {
 	public void setImage(String image) {
 		this.image = image;
 	}
-	public String getSports() {
-		return Sports;
+	public String getSport() {
+		return sport;
 	}
-	public void setSports(String sports) {
-		Sports = sports;
+	public void setSport(String sport) {
+		this.sport = sport;
 	}
 	public Users getOwner() {
 		return owner;
@@ -67,10 +72,12 @@ public class Ground {
 	public void setOwner(Users owner) {
 		this.owner = owner;
 	}
+	
+
 	@Override
 	public String toString() {
 		return "Ground [gid=" + gid + ", location=" + location + ", groundType=" + groundType + ", image=" + image
-				+ ", Sports=" + Sports + "]";
+				+ ", Sports=" + sport + "]";
 	}
 
 	

@@ -1,13 +1,10 @@
 package com.playhere.beans;
 
-import java.time.LocalDateTime;
-import java.util.UUID;
-
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity
 public class TimeSlot {
@@ -15,19 +12,23 @@ public class TimeSlot {
 	@Id
 	@GeneratedValue
 	private long id;
-	private LocalDateTime time;
-	private double price;
-	@ManyToOne
+	
+   
+	private String startTime;
+    private String endTime;
+    private double price;
+	@ManyToOne(cascade = CascadeType.ALL)
 	private Ground ground;
 
 	public TimeSlot() {
 		super();
 	}
 
-	public TimeSlot(long id, LocalDateTime time, double price, Ground ground) {
+	public TimeSlot(long id, String startTime, String endTime, double price, Ground ground) {
 		super();
 		this.id = id;
-		this.time = time;
+		this.startTime = startTime;
+		this.endTime = endTime;
 		this.price = price;
 		this.ground = ground;
 	}
@@ -40,12 +41,20 @@ public class TimeSlot {
 		this.id = id;
 	}
 
-	public LocalDateTime getTime() {
-		return time;
+	public String getStartTime() {
+		return startTime;
 	}
 
-	public void setTime(LocalDateTime time) {
-		this.time = time;
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
+	}
+
+	public String getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
 	}
 
 	public double getPrice() {
@@ -66,8 +75,10 @@ public class TimeSlot {
 
 	@Override
 	public String toString() {
-		return "TimeSlot [id=" + id + ", time=" + time + ", price=" + price + ", ground=" + ground + "]";
+		return "TimeSlot [id=" + id + ", startTime=" + startTime + ", endTime=" + endTime + ", price=" + price
+				+ ", ground=" + ground + "]";
 	}
+
 	
 	
 	

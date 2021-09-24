@@ -8,6 +8,8 @@ public interface GroundService {
 
 	List<Ground> displayAll();
 
-	void addGround(Ground ground);
+	void addGround(Ground ground, Long userId);
+
+	Ground getById(Long groundId);
 
 }
