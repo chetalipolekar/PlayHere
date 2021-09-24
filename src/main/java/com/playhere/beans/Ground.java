@@ -13,7 +13,7 @@ public class Ground {
 
 	@Id
 	@GeneratedValue
-	private Long gid;
+	private Long id;
 	private String location;
 	private String groundType;
 	private String image;
@@ -28,20 +28,20 @@ public class Ground {
 	}
 	public Ground(Long gid, String location, String groundType, String image, String sport) {
 		super();
-		this.gid = gid;
+		this.id = gid;
 		this.location = location;
 		this.groundType = groundType;
 		this.image = image;
 		this.sport = sport;
 	}
-	
-	
-	public Long getGid() {
-		return gid;
+	public Long getId() {
+		return id;
 	}
-	public void setGid(Long gid) {
-		this.gid = gid;
+	public void setId(Long id) {
+		this.id = id;
 	}
+
+	
 	public String getLocation() {
 		return location;
 	}
@@ -76,7 +76,7 @@ public class Ground {
 
 	@Override
 	public String toString() {
-		return "Ground [gid=" + gid + ", location=" + location + ", groundType=" + groundType + ", image=" + image
+		return "Ground [gid=" + id + ", location=" + location + ", groundType=" + groundType + ", image=" + image
 				+ ", Sports=" + sport + "]";
 	}
 

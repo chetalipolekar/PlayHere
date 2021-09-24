@@ -35,6 +35,11 @@ public class UserController {
 	public List<Users> getAllUsers() {
 		return userService.getAll();
 	}
+	
+	@GetMapping("/{userId}")
+	public Users getById(@PathVariable Long userId) {
+		return userService.getById(userId);
+	}
 }
 //	@PostMapping("/signup")
 //	public ResponseEntity<Users> addUsers(@RequestBody Users u) {
