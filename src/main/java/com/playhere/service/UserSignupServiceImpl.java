@@ -24,6 +24,13 @@ public class UserSignupServiceImpl implements UserSignupService {
 		return userSignupDao.getById(id);
 	}
 
+
+	@Override
+	public boolean validateUser(String email, String pass) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 	
 	
 }

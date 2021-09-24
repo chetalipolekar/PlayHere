@@ -8,4 +8,6 @@ public interface UserSignupService {
 
 	Users getById(long id);
 
+	boolean validateUser(String email, String pass);
+
 }
