@@ -4,7 +4,10 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 public class Ground {
@@ -17,7 +20,9 @@ public class Ground {
 	private String image;
 	private String Sports;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne(targetEntity=Users.class,cascade=CascadeType.ALL)
+	@JoinColumn(name="uid",referencedColumnName = "id")
+	@JsonIgnoreProperties(value={"firstname","lastname", "email", "mobile", "role","pass"})
 	private Users owner;
 	public Ground() {
 		super();
