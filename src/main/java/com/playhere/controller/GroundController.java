@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.playhere.beans.Ground;
+import com.playhere.beans.GroundDto;
 import com.playhere.service.GroundService;
 
 @RestController
@@ -29,4 +30,9 @@ public class GroundController {
 		groundService.addGround(ground, userId);
 	}
 	
+	@GetMapping("/{location}/{sport}/{time}")
+	public List<GroundDto> searchGround(@PathVariable String location,@PathVariable String sport,@PathVariable String time ) {
+		return groundService.searchGround(location,sport,time);
+		
+	}
 }

@@ -2,14 +2,15 @@ package com.playhere.beans;
 
 
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Ground {
@@ -17,27 +18,36 @@ public class Ground {
 	@Id
 	@GeneratedValue
 	private Long id;
+	private String groundName;
 	private String location;
 	private String groundType;
 	private String image;
 	private String sport;
 	
+	@OneToMany(mappedBy = "ground", cascade = CascadeType.ALL)
+	private List<TimeSlot> timeSlots;
+	
 	@ManyToOne(targetEntity=Users.class,cascade=CascadeType.ALL)
-	@JoinColumn(name="uid",referencedColumnName = "id")
-	@JsonIgnoreProperties(value={"firstname","lastname", "email", "mobile", "role","pass"})
 	private Users owner;
 
 	
 	public Ground() {
 		super();
 	}
-	public Ground(Long gid, String location, String groundType, String image, String sport) {
+	public Ground(Long gid,String groundName, String location, String groundType, String image, String sport) {
 		super();
 		this.id = gid;
+		this.groundName=groundName;
 		this.location = location;
 		this.groundType = groundType;
 		this.image = image;
 		this.sport = sport;
+	}
+	public String getGroundName() {
+		return groundName;
+	}
+	public void setGroundName(String groundName) {
+		this.groundName = groundName;
 	}
 	public Long getId() {
 		return id;
@@ -79,6 +89,13 @@ public class Ground {
 	}
 	
 
+	
+	public List<TimeSlot> getTimeSlots() {
+		return timeSlots;
+	}
+	public void setTimeSlots(List<TimeSlot> timeSlots) {
+		this.timeSlots = timeSlots;
+	}
 	@Override
 	public String toString() {
 		return "Ground [gid=" + id + ", location=" + location + ", groundType=" + groundType + ", image=" + image
