@@ -8,6 +8,8 @@ import com.playhere.beans.Users;
 @Repository
 public interface UserRepository extends JpaRepository<Users, Long> {
 
+	Users getByEmail(String email);
+
 	
 
 }
