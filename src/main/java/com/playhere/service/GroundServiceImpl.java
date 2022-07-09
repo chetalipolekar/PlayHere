@@ -67,4 +67,14 @@ public class GroundServiceImpl implements GroundService {
 
 	}
 
+	@Override
+	public void updateById(Ground ground) {
+		groundDao.save(ground);
+	}
+
+	@Override
+	public void deleteById(Long id) {
+		groundDao.deleteById(id);
+	}
+
 }

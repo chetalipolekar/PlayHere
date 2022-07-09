@@ -13,6 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
+//@Table(name="hbj")
 public class Ground {
 
 	@Id

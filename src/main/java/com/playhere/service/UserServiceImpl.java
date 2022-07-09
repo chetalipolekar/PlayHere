@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void saveOrUpdate(Users user) {
 		 userDao.save(user);
-		
+	
 	}
 
 
@@ -41,6 +41,14 @@ public class UserServiceImpl implements UserService {
 		return userDao.getById(userId);
 	}
 
+
+
+
+	@Override
+	public void deleteById(Long id) {
+		//Users u= getById(id);
+		 userDao.deleteById(id);
+	}
 
 
 	

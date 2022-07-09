@@ -15,4 +15,8 @@ public interface GroundService {
 
 	List<GroundDto> searchGround(String location, String sport, String time);
 
+	void updateById(Ground ground);
+
+	void deleteById(Long id);
+
 }
